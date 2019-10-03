@@ -6,7 +6,13 @@ let window: BrowserWindow;
 
 function createWindow () {
 
-  window = new BrowserWindow({width: 800, height: 600})
+  window = new BrowserWindow({
+    minWidth: 800, 
+    minHeight: 600, 
+    webPreferences: {
+      nodeIntegration: true
+    }
+  })
 
   window.loadURL(url.format({
     pathname: path.join(__dirname, './renderer/templates/index.html'),
@@ -14,14 +20,14 @@ function createWindow () {
     slashes: true
   }));
 
-  ipcMain.on('show-dialog', (event, {type}) => {
-    dialog.showMessageBox(window, {
-      type: type,
-      buttons: [],
-      message: 'Hello, how are you?'
-    });
-    console.log("Muskan")
-  });
+  // ipcMain.on('show-dialog', (event, {type}) => {
+  //   dialog.showMessageBox(window, {
+  //     type: type,
+  //     buttons: [],
+  //     message: 'Hello, how are you?'
+  //   });
+  //   console.log("Muskan")
+  // });
 
   window.webContents.openDevTools();
 
