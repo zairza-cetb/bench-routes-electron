@@ -1,24 +1,22 @@
-import electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
-import path = require('path');
-import url = require('url');
+import { BrowserWindow, app } from 'electron';
+import * as path from 'path';
+import * as url from 'url';
 
-let win: electron.BrowserWindow;
+let window: BrowserWindow;
 
 function createWindow () {
 
-  win = new BrowserWindow({width: 800, height: 600})
+  window = new BrowserWindow({width: 800, height: 600})
 
-  win.loadURL(url.format({
+  window.loadURL(url.format({
     pathname: path.join(__dirname, './renderer/templates/index.html'),
     protocol: 'file:',
     slashes: true
   }));
 
 
-  win.on('closed', () => {
-    win = null
+  window.on('closed', () => {
+    window = null
   });
 }
 
@@ -32,7 +30,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-  if (win === null) {
+  if (window === null) {
     createWindow();
   }
 });
