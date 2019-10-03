@@ -1,4 +1,4 @@
-import { BrowserWindow, app } from 'electron';
+import { BrowserWindow, app, dialog, ipcMain } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -14,6 +14,16 @@ function createWindow () {
     slashes: true
   }));
 
+  ipcMain.on('show-dialog', (event, {type}) => {
+    dialog.showMessageBox(window, {
+      type: type,
+      buttons: [],
+      message: 'Hello, how are you?'
+    });
+    console.log("Muskan")
+  });
+
+  window.webContents.openDevTools();
 
   window.on('closed', () => {
     window = null

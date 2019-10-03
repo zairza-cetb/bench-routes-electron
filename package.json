@@ -20,5 +20,8 @@
   "devDependencies": {
     "electron": "^6.0.10",
     "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "common-js": "^0.3.8"
   }
 }
