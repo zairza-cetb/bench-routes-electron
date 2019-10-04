@@ -6,7 +6,13 @@ let window: BrowserWindow;
 
 function createWindow () {
 
-  window = new BrowserWindow({width: 800, height: 600})
+  window = new BrowserWindow({
+    minWidth: 800,
+    minHeight: 600,
+    center: true,
+    title: 'Bench-Routes - Mark your routes',
+    hasShadow: true
+  })
 
   window.loadURL(url.format({
     pathname: path.join(__dirname, './renderer/templates/index.html'),

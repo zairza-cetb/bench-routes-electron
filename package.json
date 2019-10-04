@@ -4,8 +4,9 @@
   "description": "User interface for bench-routes",
   "main": "main.js",
   "scripts": {
-    "start": "tsc -w & electron ./app/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ./app/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "common-js": "^0.3.8"
   }
 }

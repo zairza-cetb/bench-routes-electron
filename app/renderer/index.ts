@@ -1,7 +1,5 @@
-'use strict'
-
-import {ipcRenderer, remote} from 'electron';
-
+import { ipcRenderer, remote } from 'electron';
+console.log('works')
 export default class BenchRoutesUI {
     socket: WebSocket;
     $btn1: HTMLElement;
@@ -33,5 +31,3 @@ export default class BenchRoutesUI {
     }
 
 }
-
-// module.exports = BenchRoutesUI();
