@@ -14,7 +14,8 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true
     },
-    hasShadow: true
+    hasShadow: true,
+    autoHideMenuBar: true
   })
 
   window.loadURL(url.format({
@@ -22,15 +23,6 @@ function createWindow () {
     protocol: 'file:',
     slashes: true
   }));
-
-  // ipcMain.on('show-dialog', (event, {type}) => {
-  //   dialog.showMessageBox(window, {
-  //     type: type,
-  //     buttons: [],
-  //     message: 'Hello, how are you?'
-  //   });
-  //   console.log("Muskan")
-  // });
 
   window.webContents.openDevTools();
 

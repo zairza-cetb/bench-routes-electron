@@ -1,7 +1,18 @@
-.sidebar {
-    height: 100vh;
+body {
+    background-color: #E1F5FE;
+    overflow-y: hidden;
+}
+
+.sidebar-component {
+    height: 110vh;
     background-color: #9ADDFB;
     width: 30vh;
     padding: 0%;
     margin: -2%;
+}
+
+.notification-component {
+    position: absolute;
+    right: 0%;
+    width: 40vh;
 }

@@ -23,6 +23,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
+    "@types/jquery": "^3.3.31",
     "common-js": "^0.3.8",
     "eslint": "^6.5.1"
   }
