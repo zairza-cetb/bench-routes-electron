@@ -11,6 +11,9 @@ function createWindow () {
     minHeight: 600,
     center: true,
     title: 'Bench-Routes - Mark your routes',
+    webPreferences: {
+      nodeIntegration: true
+    },
     hasShadow: true
   })
 
@@ -20,14 +23,14 @@ function createWindow () {
     slashes: true
   }));
 
-  ipcMain.on('show-dialog', (event, {type}) => {
-    dialog.showMessageBox(window, {
-      type: type,
-      buttons: [],
-      message: 'Hello, how are you?'
-    });
-    console.log("Muskan")
-  });
+  // ipcMain.on('show-dialog', (event, {type}) => {
+  //   dialog.showMessageBox(window, {
+  //     type: type,
+  //     buttons: [],
+  //     message: 'Hello, how are you?'
+  //   });
+  //   console.log("Muskan")
+  // });
 
   window.webContents.openDevTools();
 
