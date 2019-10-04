@@ -1,8 +1,10 @@
 import { BrowserWindow, app, dialog, ipcMain } from 'electron';
+import * as electronReload from 'electron-reload';
 import * as path from 'path';
 import * as url from 'url';
 
 let window: BrowserWindow;
+electronReload(__dirname);
 
 function createWindow () {
 

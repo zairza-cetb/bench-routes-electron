@@ -1,22 +1,18 @@
 interface Routing {
-    url: string;
-    path: string
+    homePath: string;
+    pingPath: string;
+    jitterPath: string;
 }
 
 export class Routes {
-    routes: Routing[];
+    routes: Routing;
 
     constructor() {
-        this.routes = [
-            {
-                url: '/home',
-                path: 'home.html'
-            },
-            {
-                url: '/dashboard',
-                path: 'home.html'
-            }
-        ];
+        this.routes = {
+            homePath: 'home.html',
+            pingPath: 'ping.html',
+            jitterPath: 'jitter.html'
+        };
     }
 }
 

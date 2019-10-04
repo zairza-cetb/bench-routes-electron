@@ -20,11 +20,13 @@
   "homepage": "https://github.com/zairza-cetb/bench-routes-electron#readme",
   "devDependencies": {
     "electron": "^6.0.10",
+    "electron-reload": "^1.5.0",
     "typescript": "^3.6.3"
   },
   "dependencies": {
     "@types/jquery": "^3.3.31",
     "common-js": "^0.3.8",
-    "eslint": "^6.5.1"
+    "eslint": "^6.5.1",
+    "jquery": "^3.4.1"
   }
 }
