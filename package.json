@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@electron/typescript-definitions": "^8.6.3",
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
     "@types/react": "^16.9.9",
@@ -40,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "main": "public/main.js"
+  "main": "public/main.ts"
 }

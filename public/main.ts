@@ -1,6 +1,4 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+import { app, BrowserWindow } from "electron";
 
 const path = require('path');
 const url = require('url');
@@ -8,7 +6,7 @@ const isDev = require('electron-is-dev');
 
 let mainWindow;
 
-export function createWindow() {
+function createWindow() {
 
   mainWindow = new BrowserWindow({
     minWidth: 800,
