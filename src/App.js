@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -17,7 +17,10 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
+        <h1>
+          Welcome to Bench Routes
+        </h1>
       </header>
     </div>
   );
