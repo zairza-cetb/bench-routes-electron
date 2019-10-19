@@ -9,18 +9,6 @@ body {
   flex-direction: row;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.main {
-  padding: 10px 15px;
-=======
-body {
-  background-color: transparent;
-  overflow-y: hidden;
-  overflow-x: hidden;
->>>>>>> notifications with animations
-}
-=======
 .outer-wrapper {
   position: absolute;
   left: 22%;
@@ -31,4 +19,7 @@ body {
   margin-top: 7%;
   margin-left: 2%;
 }
->>>>>>> dev header and notifs
+
+.main {
+  padding: 10px 15px;
+}
