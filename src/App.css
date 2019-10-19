@@ -9,6 +9,19 @@ body {
   flex-direction: row;
 }
 
+<<<<<<< HEAD
 .main {
   padding: 10px 15px;
 }
+=======
+.outer-wrapper {
+  position: absolute;
+  left: 22%;
+  width: 75%;
+}
+
+.inner-component {
+  margin-top: 7%;
+  margin-left: 2%;
+}
+>>>>>>> dev header and notifs
