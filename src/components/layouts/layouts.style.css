@@ -29,15 +29,24 @@
 }
 
 header {
+<<<<<<< HEAD
   position: absolute;
   width: 104%;
   height: 50%;
   border-bottom: 1px solid #f1f1f3;
+=======
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #f1f1f3;
+  justify-content: space-between;
+>>>>>>> dev header and notifs
 }
 
 .logo-name {
   font-size: 20px;
   font-weight: 600;
+<<<<<<< HEAD
   margin: 1% 0% 0% 2%;
   font-family: "Open Sans";
 }
@@ -63,4 +72,13 @@ header {
   transition: width 0.8s;
   width: 0%;
   right: -4%;
+=======
+  font-family: "Open Sans";
+  padding: 10px 15px;
+}
+
+.notification-icon {
+  height: 28px;
+  padding: 10px 15px;
+>>>>>>> dev header and notifs
 }

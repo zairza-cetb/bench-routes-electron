@@ -23,3 +23,13 @@ body {
 .main {
   padding: 10px 15px;
 }
+
+.App-link {
+  color: #09d3ac;
+}
+
+.inner-component {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
