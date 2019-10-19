@@ -2,7 +2,7 @@ import React from "react";
 import "./layouts.style.css";
 import { HashRouter as Router, Link } from "react-router-dom";
 
-export default class Sidebar extends React.Component {
+export default class Sidebar extends React.Component<{}> {
   render() {
     return (
       <Router>
