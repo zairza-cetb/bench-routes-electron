@@ -1,11 +1,5 @@
 import React from 'react';
 
-export default class Header extends React.Component {
-    render() {
-        return (
-            <header>
-                bench-routes
-            </header>
-        );
-    }
-}
+const Header = () => <header>bench-routes</header>;
+
+export default Header;

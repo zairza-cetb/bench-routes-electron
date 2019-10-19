@@ -1,11 +1,5 @@
 import React from 'react';
 
-export default class Monitoring extends React.Component {
-  render() {
-    return (
-      <div>
-        This is Monitoring
-      </div>
-    );
-  }
-}
+const Monitoring = () => <div>This is Monitoring</div>;
+
+export default Monitoring;
