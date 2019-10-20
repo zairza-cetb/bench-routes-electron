@@ -6,7 +6,6 @@ export default class Notification extends React.Component {
     if (global.showNotificationScreen) {
       document.getElementById('notification').style.width = '40%';
       document.getElementById('notification').style.display = 'block';
-
     }
   }
 
