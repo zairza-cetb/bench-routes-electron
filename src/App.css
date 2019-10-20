@@ -7,6 +7,7 @@ body {
 .App {
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ body {
 
 .main {
   padding: 10px 15px;
+=======
+>>>>>>> Finish fixing merge conflicts
 }
 
 =======
@@ -37,5 +40,8 @@ body {
   flex-direction: column;
   width: 100%;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> Added travis and fixed eslint (#20)
+=======
+>>>>>>> Finish fixing merge conflicts

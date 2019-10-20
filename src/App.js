@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import './App.css';
 import Header from './components/layouts/Header';
 import Sidebar from './components/layouts/Sidebar';
 import Navigator from './router/Navigation';
 import Notification from './components/notification/Notification';
+=======
+import React from "react";
+import "./App.css";
+import { Header } from "./components/layouts/Header";
+import Sidebar from "./components/layouts/Sidebar";
+import Navigator from "./router/Navigation";
+>>>>>>> Finish fixing merge conflicts
 
 global.showNotificationSection = true;
 =======
@@ -29,9 +37,12 @@ function App() {
     <div className="App">
       <Sidebar className="sidebar" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="outer-wrapper">
+=======
+      <div className="inner-component">
+>>>>>>> Finish fixing merge conflicts
         <Header />
-        <Notification />
         <div className="inner-component">
           <Navigator />
         </div>
