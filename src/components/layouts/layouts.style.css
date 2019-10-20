@@ -48,3 +48,19 @@ header {
   top: 4%;
   height: 28px;
 }
+
+.notification-icon {
+  position: absolute;
+  right: 1%;
+  top: 4%;
+  height: 30px;
+}
+
+.notification-screen {
+  position: absolute;
+  background-color: #f1f1f3;
+  height: 100vh;
+  transition: width 0.8s;
+  width: 0%;
+  right: -4%;
+}

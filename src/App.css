@@ -10,8 +10,15 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .main {
   padding: 10px 15px;
+=======
+body {
+  background-color: transparent;
+  overflow-y: hidden;
+  overflow-x: hidden;
+>>>>>>> notifications with animations
 }
 =======
 .outer-wrapper {
