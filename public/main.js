@@ -12,6 +12,7 @@ require('electron-reload')(__dirname);
 let mainWindow;
 
 function createWindow() {
+<<<<<<< HEAD
   mainWindow = new BrowserWindow({
     minWidth: 1000,
     minHeight: 600,
@@ -29,6 +30,28 @@ function createWindow() {
 
   mainWindow.webContents.openDevTools();
   mainWindow.on('closed', () => mainWindow = null);
+=======
+
+    mainWindow = new BrowserWindow({
+        minWidth: 1000,
+        minHeight: 600,
+        center: true,
+        title: 'Bench-Routes - Mark your routes',
+        webPreferences: {
+          nodeIntegration: true
+        },
+        hasShadow: true,
+        autoHideMenuBar: true,
+        transparent: false
+    });
+
+    mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
+
+    mainWindow.webContents.openDevTools();
+
+    mainWindow.on('closed', () => mainWindow = null);
+
+>>>>>>> Update main.js
 }
 
 app.on('ready', createWindow);
