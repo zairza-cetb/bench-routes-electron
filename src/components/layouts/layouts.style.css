@@ -48,11 +48,48 @@ header {
   padding: 10px 15px;
 }
 
-.notification-screen {
+.notification {
   position: absolute;
-  background-color: #f1f1f3;
   height: 100vh;
-  transition: width 0.8s;
-  width: 0%;
-  right: -4%;
+  width: 600px;
+  right: -610px;
+  box-shadow: 2px 2px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid gray;
+}
+
+.notification-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+.display-notification {
+  right: -600px;
+  background: white;
+  animation: slideIn 0.2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    right: -600px;
+  }
+  90% {
+    width: 605px;
+    right: 5px;
+  }
+  100% {
+    width: 600px;
+    right: 0;
+  }
 }
