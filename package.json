@@ -25,10 +25,14 @@
     "build": "electron-packager . bench-routes-electron",
     "eject": "react-scripts eject",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "lint": "eslint . --fix",
 =======
     "lint": "eslint ./src --fix" ,
 >>>>>>> Eslint integration with airbnb extension (#12)
+=======
+    "lint": "eslint ./src --fix",
+>>>>>>> added rules for eslint, fixed files (#17)
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
