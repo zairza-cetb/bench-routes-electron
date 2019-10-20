@@ -9,6 +9,7 @@ body {
   flex-direction: row;
 }
 
+<<<<<<< HEAD
 .outer-wrapper {
   position: absolute;
   left: 22%;
@@ -25,6 +26,8 @@ body {
   padding: 10px 15px;
 }
 
+=======
+>>>>>>> notifications with animations
 .App-link {
   color: #09d3ac;
 }

@@ -13,7 +13,13 @@ import "./App.css";
 import Header from "./components/layouts/Header";
 import Sidebar from "./components/layouts/Sidebar";
 import Navigator from "./router/Navigation";
+<<<<<<< HEAD
 >>>>>>> dev header and notifs
+=======
+import Notification from "./components/notification/Notification";
+
+global.showNotificationSection = true;
+>>>>>>> notifications with animations
 
 function App() {
   return (
