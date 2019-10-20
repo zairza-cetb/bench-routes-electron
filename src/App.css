@@ -9,10 +9,6 @@ body {
   flex-direction: row;
 }
 
-.main {
-  padding: 10px 15px;
-}
-
 .App-link {
   color: #09d3ac;
 }

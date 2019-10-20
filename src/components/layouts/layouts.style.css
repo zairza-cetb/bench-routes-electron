@@ -47,3 +47,12 @@ header {
   height: 28px;
   padding: 10px 15px;
 }
+
+.notification-screen {
+  position: absolute;
+  background-color: #f1f1f3;
+  height: 100vh;
+  transition: width 0.8s;
+  width: 0%;
+  right: -4%;
+}
