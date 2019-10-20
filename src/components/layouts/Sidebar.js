@@ -39,26 +39,6 @@ export default class Sidebar extends React.Component {
               </div>
             </div>
           </Link>
-          <Link to="/monitoring" style={{ textDecoration: 'none' }}>
-            <div>
-              <div className="sidebar-inner">
-                <img
-                  src="assets/icons/monitoring-icon.svg"
-                  className="sidebar-inner"
-                  alt="monitoring"
-                />
-                <div className="sidebar-head sidebar-inner">Monitoring</div>
-              </div>
-            </div>
-          </Link>
-          <Link to="/benchmarks" style={{ textDecoration: 'none' }}>
-            <div>
-              <div className="sidebar-inner">
-                <img src="assets/icons/bench-icon.svg" className="sidebar-inner" alt="Benchmarks" />
-                <div className="sidebar-head sidebar-inner">Benchmarks</div>
-              </div>
-            </div>
-          </Link>
         </div>
       </Router>
     );
