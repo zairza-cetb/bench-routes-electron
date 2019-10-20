@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useState } from "react";
+import Notification from "../notification/Notification";
 
-export default class Header extends React.Component {
+export const Header = props => {
+  const [showNotification, setShowNotification] = useState(false);
 
-  render() {
-    return (
+  const updateShowNotificationsScreen = () => {
+    setShowNotification(!showNotification);
+  };
+
+  return (
+    <>
+      <Notification
+        showNotification={showNotification}
+        updateShowNotificationsScreen={updateShowNotificationsScreen}
+      />
       <header>
-        <div className='logo-name'>
-          Bench-routes
+        <div className="logo-name">Bench-routes</div>
+        <div className="notification-icon">
+          <img
+            src="assets/icons/notify-icon.svg"
+            alt="notification"
+            onClick={() => updateShowNotificationsScreen()}
+            onKeyDown={e => {
+              if (e.keyCode === 13) {
+                updateShowNotificationsScreen();
+              }
+            }}
+          />
         </div>
       </header>
-    );
-  }
-}
+    </>
+  );
+};

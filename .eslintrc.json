@@ -24,6 +24,7 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+<<<<<<< HEAD
         "react/prefer-stateless-function": [0, { "ignorePureComponents": false }],
         "indent": [
             "error",
@@ -57,6 +58,9 @@
         "no-invalid-this": "error",
         "keyword-spacing": "error",
         "space-before-blocks": "error"
+=======
+        "react/prefer-stateless-function": [0, { "ignorePureComponents": false }]
+>>>>>>> Eslint integration with airbnb extension (#12)
     },
     "overrides": [
         {

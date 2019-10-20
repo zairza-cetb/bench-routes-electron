@@ -10,13 +10,16 @@ global.showNotificationSection = true;
 =======
 import React from "react";
 import "./App.css";
-import Header from "./components/layouts/Header";
+import { Header } from "./components/layouts/Header";
 import Sidebar from "./components/layouts/Sidebar";
 import Navigator from "./router/Navigation";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> dev header and notifs
 =======
 import Notification from "./components/notification/Notification";
+=======
+>>>>>>> Eslint integration with airbnb extension (#12)
 
 global.showNotificationSection = true;
 >>>>>>> notifications with animations

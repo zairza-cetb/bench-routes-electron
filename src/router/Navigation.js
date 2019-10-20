@@ -11,6 +11,10 @@ const Navigator = () => (
       <Route exact path="/" component={Dashboard} />
       <Route path="/monitoring" component={Monitoring} />
       <Route path="/benchmarks" component={Benchmarks} />
+<<<<<<< HEAD
+=======
+      <Route path="/settings" component={Settings} />
+>>>>>>> Eslint integration with airbnb extension (#12)
     </Switch>
   </Router>
 );
