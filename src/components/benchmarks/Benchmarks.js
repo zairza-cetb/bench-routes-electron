@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Benchmarks = () => <div>This is Benchmarking</div>;
-
-export default Benchmarks;
+export default class Benchmarks extends React.Component {
+  render() {
+    return <div>This is Benchmarking</div>;
+  }
+}
