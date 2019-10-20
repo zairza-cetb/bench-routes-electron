@@ -3,17 +3,15 @@ import React from 'react';
 
 export default class Notification extends React.Component {
   componentDidMount() {
-    console.log('called');
     if (global.showNotificationScreen) {
       document.getElementById('notification').style.width = '40%';
       document.getElementById('notification').style.display = 'block';
+
     }
   }
 
   updateShowNotificationsScreen = () => {
-    console.log('updating');
     global.showNotificationSection = !global.showNotificationSection;
-    console.log(global.showNotificationSection);
     if (global.showNotificationSection) {
       document.getElementById('notification').style.width = '40%';
     } else {
@@ -24,7 +22,12 @@ export default class Notification extends React.Component {
   render() {
     return (
       <div>
-        <div className="notification-icon">
+        <div
+          className="notification-icon"
+          style={{
+            cursor: 'pointer',
+          }}
+        >
           <img
             src="assets/icons/notify-icon.svg"
             alt="notification"
@@ -43,6 +46,7 @@ export default class Notification extends React.Component {
               padding: '1% 0% 3% 2%',
               borderBottom: '1px solid #fff',
               width: '100%',
+              cursor: 'pointer',
             }}
           >
             <img

@@ -21,7 +21,7 @@
     "react-test": "react-scripts test",
     "build": "electron-packager . bench-routes-electron",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src --fix" ,
+    "lint": "eslint . --fix",
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {

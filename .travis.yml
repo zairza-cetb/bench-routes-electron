@@ -2,7 +2,8 @@ sudo: false
 
 os:
   - linux
-
+  -osx
+  
 language: node_js
 
 node_js:
@@ -16,8 +17,10 @@ before_install:
   - npm install -g npm@latest
   - npm install --dev
   - npm install
+  - npm install -g eslint electron electron-packager
 
 script:
+  - eslint .
   - npm run react-test
   - npm run react-build
   - npm run build
