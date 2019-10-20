@@ -11,7 +11,6 @@ Follow the below `commit` syntax to cerify the code and pass the DCO test.
 git commit -s -m <commit-message>
 ```
 
-
 For installation instructions, please head-over to [INSTALL.md](INSTALL.md).
 
 
