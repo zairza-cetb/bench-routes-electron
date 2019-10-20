@@ -1,0 +1,24 @@
+sudo: false
+
+os:
+  - linux
+
+language: node_js
+
+node_js:
+- '8'
+
+cache:
+  directories:
+  - node_modules
+
+before_install:
+  - npm install -g npm@latest
+  - npm install --dev
+  - npm install
+
+script:
+  - npm run react-test
+  - npm run react-build
+  - npm run build
+  - npm start &
