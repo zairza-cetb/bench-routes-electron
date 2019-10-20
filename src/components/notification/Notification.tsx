@@ -103,7 +103,10 @@ export default class Notification extends React.Component {
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from "react";
 
-export default class Notification extends React.Component {
+export default class Notification extends React.Component<{
+  showNotification: boolean;
+  updateShowNotificationsScreen: () => void;
+}> {
   render() {
     return (
       <div
@@ -120,7 +123,7 @@ export default class Notification extends React.Component {
               onClick={() => this.props.updateShowNotificationsScreen()}
               onKeyDown={e => {
                 if (e.keyCode === 13) {
-                  return this.props.updateShowNotificationsScreen;
+                  return this.props.updateShowNotificationsScreen();
                 }
               }}
             />

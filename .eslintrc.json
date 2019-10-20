@@ -16,6 +16,16 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+<<<<<<< HEAD
+=======
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+>>>>>>> Fix eslint errors
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

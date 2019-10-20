@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix eslint errors
 import React from 'react';
 import './App.css';
 import Header from './components/layouts/Header';
 import Sidebar from './components/layouts/Sidebar';
 import Navigator from './router/Navigation';
+<<<<<<< HEAD
 import Notification from './components/notification/Notification';
 =======
 import React from "react";
@@ -13,6 +17,8 @@ import { Header } from "./components/layouts/Header";
 import Sidebar from "./components/layouts/Sidebar";
 import Navigator from "./router/Navigation";
 >>>>>>> Finish fixing merge conflicts
+=======
+>>>>>>> Fix eslint errors
 
 global.showNotificationSection = true;
 =======
