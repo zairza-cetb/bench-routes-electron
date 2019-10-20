@@ -19,6 +19,7 @@ body {
   margin-top: 7%;
   margin-left: 2%;
 }
+<<<<<<< HEAD
 
 .main {
   padding: 10px 15px;
@@ -33,3 +34,5 @@ body {
   flex-direction: column;
   width: 100%;
 }
+=======
+>>>>>>> Added travis and fixed eslint (#20)

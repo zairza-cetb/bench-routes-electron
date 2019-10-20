@@ -1,17 +1,36 @@
 {
   "compilerOptions": {
     "target": "es5",
+<<<<<<< HEAD
     "lib": ["dom", "dom.iterable", "esnext"],
+=======
+    "module": "esnext",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+>>>>>>> Added travis and fixed eslint (#20)
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+<<<<<<< HEAD
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
+=======
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+>>>>>>> Added travis and fixed eslint (#20)
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+<<<<<<< HEAD
     "jsx": "react",
     "alwaysStrict": true,
     "noImplicitAny": true,
@@ -23,4 +42,15 @@
     "strict": true
   },
   "include": ["src"]
+=======
+    "jsx": "react"
+  },
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+>>>>>>> Added travis and fixed eslint (#20)
 }
