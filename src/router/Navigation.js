@@ -5,6 +5,7 @@ import Monitoring from "../components/monitoring/Monitoring";
 import Benchmarks from "../components/benchmarks/Benchmarks";
 import Settings from "../components/settings/Settings";
 
+<<<<<<< HEAD
 export default class Navigator extends React.Component {
   render() {
     return (
@@ -19,3 +20,16 @@ export default class Navigator extends React.Component {
     );
   }
 }
+=======
+const Navigator = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Dashboard} />
+      <Route path="/monitoring" component={Monitoring} />
+      <Route path="/benchmarks" component={Benchmarks} />
+    </Switch>
+  </Router>
+);
+
+export default Navigator;
+>>>>>>> Eslint integration with airbnb extension (#12)
