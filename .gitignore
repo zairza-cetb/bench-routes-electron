@@ -4,4 +4,7 @@
 npm-debug.log*
 node_modules/
 .node_repl_history
+<<<<<<< HEAD
 build/
+=======
+>>>>>>>  Do not ignore package-lock.json
