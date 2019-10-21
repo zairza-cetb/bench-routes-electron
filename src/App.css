@@ -7,32 +7,6 @@ body {
 .App {
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-.outer-wrapper {
-  position: absolute;
-  left: 22%;
-  width: 75%;
-}
-
-.inner-component {
-  margin-top: 7%;
-  margin-left: 2%;
-}
-<<<<<<< HEAD
-
-.main {
-  padding: 10px 15px;
-=======
->>>>>>> Finish fixing merge conflicts
-}
-
-=======
->>>>>>> notifications with animations
-.App-link {
-  color: #09d3ac;
 }
 
 .inner-component {
@@ -40,8 +14,3 @@ body {
   flex-direction: column;
   width: 100%;
 }
-<<<<<<< HEAD
-=======
->>>>>>> Added travis and fixed eslint (#20)
-=======
->>>>>>> Finish fixing merge conflicts
