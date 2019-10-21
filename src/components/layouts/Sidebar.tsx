@@ -7,7 +7,7 @@ export default class Sidebar extends React.Component<{}> {
     return (
       <Router>
         <div className="sidebar">
-          <div className="sidebar-top-links">
+          <div className="sidebar-content">
             <Link to="/" style={{ textDecoration: "none" }}>
               <div>
                 <div className="sidebar-inner">
@@ -44,13 +44,12 @@ export default class Sidebar extends React.Component<{}> {
                 </div>
               </div>
             </Link>
-          </div>
-          <div className="sidebar-bottom-links">
+            <div className="sidebar-bottom-links">
             <Link to="/settings" style={{ textDecoration: "none" }}>
               <div>
                 <div className="sidebar-inner">
                   <img
-                    src="assets/icons/dashboard-icon.svg"
+                    src="assets/icons/settings-icon.svg"
                     className="sidebar-inner"
                     alt="settings"
                   />
@@ -58,6 +57,7 @@ export default class Sidebar extends React.Component<{}> {
                 </div>
               </div>
             </Link>
+          </div>
           </div>
         </div>
       </Router>

@@ -22,10 +22,15 @@
   color: black;
 }
 
-.sidebar-top-links {
+.sidebar-content {
   height: 60%;
   margin-bottom: 15px;
   border-bottom: 1px solid #282c34;
+}
+
+.sidebar-bottom-links{
+  bottom: 0;
+  position: absolute;
 }
 
 header {
