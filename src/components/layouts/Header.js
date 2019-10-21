@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { useState } from 'react';
-import Notification from '../notification/Notification';
+import React, { useState } from "react";
+import Notification from "../notification/Notification";
 
 export default function Header() {
   const [showNotification, setShowNotification] = useState(false);
@@ -22,7 +22,7 @@ export default function Header() {
             src="assets/icons/notify-icon.svg"
             alt="notification"
             onClick={() => updateShowNotificationsScreen()}
-            onKeyDown={(e) => {
+            onKeyDown={e => {
               if (e.keyCode === 13) {
                 updateShowNotificationsScreen();
               }

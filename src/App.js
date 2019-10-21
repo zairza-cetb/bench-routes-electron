@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import Header from './components/layouts/Header';
-import Sidebar from './components/layouts/Sidebar';
-import Navigator from './router/Navigation';
+import React from "react";
+import "./App.css";
+import Header from "./components/layouts/Header";
+import Sidebar from "./components/layouts/Sidebar";
+import Navigator from "./router/Navigation";
 
 function App() {
   return (

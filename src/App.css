@@ -14,3 +14,20 @@ body {
   flex-direction: column;
   width: 100%;
 }
+
+body {
+  background-color: transparent;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.outer-wrapper {
+  position: absolute;
+  left: 22%;
+  width: 75%;
+}
+
+.inner-component {
+  margin-top: 7%;
+  margin-left: 2%;
+}
