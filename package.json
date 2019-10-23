@@ -1,5 +1,5 @@
 {
-  "name": "electron-react",
+  "name": "bench-routes-electron",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,21 +9,24 @@
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
     "concurrently": "^5.0.0",
-    "electron": "^6.0.12",
+    "electron": "^7.0.0-beta.7",
     "electron-builder": "^21.2.0",
     "electron-is-dev": "^1.1.0",
     "electron-reload": "^1.5.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "typescript": "^3.6.4",
     "wait-on": "^3.3.0"
   },
   "scripts": {
     "react-start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "build": "electron-packager . bench-routes-electron",
     "eject": "react-scripts eject",
+    "lint": "eslint . --fix",
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
@@ -41,5 +44,22 @@
       "last 1 safari version"
     ]
   },
-  "main": "public/main.ts"
+  "main": "public/main.ts",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "electron-packager": "^14.0.6",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.0.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
 }

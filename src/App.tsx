@@ -1,27 +1,17 @@
-import * as React from 'react';
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/layouts/Header';
+import Sidebar from './components/layouts/Sidebar';
+import Navigator from './router/Navigation';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        <h1>
-          Welcome to Bench Routes
-        </h1>
-      </header>
+      <Sidebar className="sidebar" />
+      <div className="inner-component">
+        <Header />
+        <Navigator />
+      </div>
     </div>
   );
 }
