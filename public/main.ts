@@ -1,7 +1,6 @@
 import { app, BrowserWindow } from "electron";
 
 const path = require('path');
-const url = require('url');
 const isDev = require('electron-is-dev');
 
 let mainWindow;
