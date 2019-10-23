@@ -4,10 +4,6 @@
   "private": true,
   "dependencies": {
     "@electron/typescript-definitions": "^8.6.3",
-    "@types/jest": "^24.0.19",
-    "@types/node": "^12.11.1",
-    "@types/react": "^16.9.9",
-    "@types/react-dom": "^16.9.2",
     "concurrently": "^5.0.0",
     "electron": "^7.0.0-beta.7",
     "electron-builder": "^21.2.0",
@@ -55,6 +51,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
     "husky": "^3.0.9"
   },
   "husky": {
