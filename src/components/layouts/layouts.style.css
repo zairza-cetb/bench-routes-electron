@@ -28,7 +28,11 @@
   border-bottom: 1px solid #282c34;
 }
 
-.sidebar-bottom-links{
+.sidebar-button-active {
+  background-color: gray;
+}
+
+.sidebar-bottom-links {
   bottom: 0;
   position: absolute;
 }

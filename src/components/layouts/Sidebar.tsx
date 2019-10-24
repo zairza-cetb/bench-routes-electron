@@ -3,14 +3,27 @@ import "./layouts.style.css";
 import { HashRouter as Router, Link } from "react-router-dom";
 
 export default class Sidebar extends React.Component<{}> {
+  state = {
+    active: Array(4).fill(false)
+  };
+
+  activeClassToggle = x => {
+    var activeState = this.state.active;
+    activeState.fill(false);
+    activeState[x] = true;
+    this.setState({ active: activeState });
+  };
   render() {
     return (
       <Router>
         <div className="sidebar">
           <div className="sidebar-content">
             <Link to="/" style={{ textDecoration: "none" }}>
-              <div>
-                <div className="sidebar-inner">
+              <div
+                className={this.state.active[0] ? "sidebar-button-active" : ""}
+                onClick={e => this.activeClassToggle(0)}
+              >
+                <div>
                   <img
                     src="assets/icons/dashboard-icon.svg"
                     className="sidebar-inner"
@@ -22,7 +35,12 @@ export default class Sidebar extends React.Component<{}> {
             </Link>
             <Link to="/monitoring" style={{ textDecoration: "none" }}>
               <div>
-                <div className="sidebar-inner">
+                <div
+                  className={
+                    this.state.active[1] ? "sidebar-button-active" : ""
+                  }
+                  onClick={e => this.activeClassToggle(1)}
+                >
                   <img
                     src="assets/icons/monitoring-icon.svg"
                     className="sidebar-inner"
@@ -34,7 +52,12 @@ export default class Sidebar extends React.Component<{}> {
             </Link>
             <Link to="/benchmarks" style={{ textDecoration: "none" }}>
               <div>
-                <div className="sidebar-inner">
+                <div
+                  className={
+                    this.state.active[2] ? "sidebar-button-active" : ""
+                  }
+                  onClick={e => this.activeClassToggle(2)}
+                >
                   <img
                     src="assets/icons/bench-icon.svg"
                     className="sidebar-inner"
@@ -45,19 +68,24 @@ export default class Sidebar extends React.Component<{}> {
               </div>
             </Link>
             <div className="sidebar-bottom-links">
-            <Link to="/settings" style={{ textDecoration: "none" }}>
-              <div>
-                <div className="sidebar-inner">
-                  <img
-                    src="assets/icons/settings-icon.svg"
-                    className="sidebar-inner"
-                    alt="settings"
-                  />
-                  <div className="sidebar-head sidebar-inner">Settings</div>
+              <Link to="/settings" style={{ textDecoration: "none" }}>
+                <div>
+                  <div
+                    className={
+                      this.state.active[3] ? "sidebar-button-active" : ""
+                    }
+                    onClick={e => this.activeClassToggle(3)}
+                  >
+                    <img
+                      src="assets/icons/settings-icon.svg"
+                      className="sidebar-inner"
+                      alt="settings"
+                    />
+                    <div className="sidebar-head sidebar-inner">Settings</div>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
           </div>
         </div>
       </Router>
