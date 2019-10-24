@@ -73,6 +73,7 @@ header {
   justify-content: space-between;
   padding: 10px 15px;
   border-bottom: 1px solid gray;
+  height: 6;
 }
 
 .notification-body {
