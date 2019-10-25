@@ -10,7 +10,7 @@ export default class Submenu extends React.Component<{
     urlSlot: '',
     methodSlot: '',
     routeSlot: '',
-    paramSlot: ''
+    paramSlot: "dg"
   }
 
   sendAddress = () => {
@@ -18,6 +18,7 @@ export default class Submenu extends React.Component<{
   }
 
   componentDidMount() {
+    console.log()
     this.setState({module: this.props.module})
   }
 
