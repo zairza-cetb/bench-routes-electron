@@ -25,7 +25,7 @@
     "build": "electron-packager . bench-routes-electron",
     "eject": "react-scripts eject",
     "lint": "eslint . --fix",
-    "tlint": "tslint --project .",
+    "tlint": "tslint --fix --project ./tsconfig.json -e src/*.js public/*.js",
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
@@ -59,7 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint && npm run tlint"
     }
   }
 }

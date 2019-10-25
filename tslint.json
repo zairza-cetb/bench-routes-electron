@@ -70,6 +70,7 @@
     },
     "prefer-const": true,
     "prefer-for-of": true,
+    "quotemark": [true, "single", "jsx-single", "avoid-escape", "avoid-template"],
     "radix": true,
     "triple-equals": { "options": ["allow-null-check"] },
     "typedef": false,

@@ -2,16 +2,16 @@ import React from 'react';
 import Submenu from '../../layouts/Submenu';
 
 export default class PingModule extends React.Component {
-  state = {
+  public state = {
     // submenu ddress
-    sAddress: ''
-  }
+    sAddress: '',
+  };
 
-  getAddressSubmenu = (sAddress: string) => {
+  public getAddressSubmenu = (sAddress: string) => {
     this.state.sAddress = sAddress;
   }
 
-  render() {
+  public render() {
     return (
       <Submenu module='ping' submodule='' getAddress={this.getAddressSubmenu} />
     );

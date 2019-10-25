@@ -6,11 +6,11 @@ import Navigator from './router/Navigation';
 
 function App() {
   return (
-    <div className="App">
-      <div className="sidebar">
+    <div className='App'>
+      <div className='sidebar'>
         <Sidebar />
       </div>
-      <div className="inner-component">
+      <div className='inner-component'>
         <Header />
         <Navigator />
       </div>

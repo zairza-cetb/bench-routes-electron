@@ -3,26 +3,27 @@ import React from 'react';
 export default class Submenu extends React.Component<{
   module: string,
   submodule: string,
-  getAddress: (sAddress: string) => void
+  getAddress: (sAddress: string) => void,
 }> {
-  state = {
-    module: '',
-    urlSlot: '',
+  public state = {
     methodSlot: '',
+    module: '',
+    paramSlot: 'dg',
     routeSlot: '',
-    paramSlot: "dg"
+    urlSlot: '',
+  };
+
+  public sendAddress = () => {
+    this.props.getAddress(
+      this.state.urlSlot + '/' + this.state.methodSlot + '/' + this.state.routeSlot + '/' + this.state.paramSlot,
+    );
   }
 
-  sendAddress = () => {
-    this.props.getAddress(this.state.urlSlot + '/' + this.state.methodSlot + '/' + this.state.routeSlot + '/' + this.state.paramSlot);
+  public componentDidMount() {
+    this.setState({module: this.props.module});
   }
 
-  componentDidMount() {
-    console.log()
-    this.setState({module: this.props.module})
-  }
-
-  render() {
+  public render() {
     return (
       <>
         {/* submenu container */}

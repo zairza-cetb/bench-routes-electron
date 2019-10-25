@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* tslint:disable */
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -123,7 +124,6 @@ export function register(config) {
     });
   }
 }
-
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
