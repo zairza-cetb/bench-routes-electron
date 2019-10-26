@@ -27,7 +27,7 @@
     "comment-format": {
         "options": ["check-space"]
     },
-    "cyclomatic-complexity": false,
+    "cyclomatic-complexity": true,
     "forin": true,
     "jsdoc-format": true,
     "label-position": true,
@@ -43,7 +43,7 @@
     "no-debugger": true,
     "no-duplicate-super": true,
     "no-empty": true,
-    "no-empty-interface": true,
+    "no-empty-interface": false,
     "no-eval": true,
     "no-internal-module": true,
     "no-invalid-this": false,
