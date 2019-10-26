@@ -8,10 +8,10 @@ import Settings from '../components/settings/Settings';
 const Navigator = () => (
   <Router>
     <Switch>
-      <Route exact path='/' component={Dashboard} />
-      <Route path='/monitoring' component={Monitoring} />
-      <Route path='/benchmarks' component={Benchmarks} />
-      <Route path='/settings' component={Settings} />
+      <Route exact path="/" component={Dashboard} />
+      <Route path="/monitoring" component={Monitoring} />
+      <Route path="/benchmarks" component={Benchmarks} />
+      <Route path="/settings" component={Settings} />
     </Switch>
   </Router>
 );

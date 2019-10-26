@@ -1,43 +1,49 @@
 import React from 'react';
 
 export default class Submenu extends React.Component<{
-  module: string,
-  submodule: string,
-  getAddress: (sAddress: string) => void,
+  module: string;
+  submodule: string;
+  getAddress: (sAddress: string) => void;
 }> {
   public state = {
     methodSlot: '',
     module: '',
     paramSlot: 'dg',
     routeSlot: '',
-    urlSlot: '',
+    urlSlot: ''
   };
 
   public sendAddress = () => {
     this.props.getAddress(
-      this.state.urlSlot + '/' + this.state.methodSlot + '/' + this.state.routeSlot + '/' + this.state.paramSlot,
+      this.state.urlSlot +
+        '/' +
+        this.state.methodSlot +
+        '/' +
+        this.state.routeSlot +
+        '/' +
+        this.state.paramSlot
     );
-  }
+  };
 
   public componentDidMount() {
-    this.setState({module: this.props.module});
+    this.setState({ module: this.props.module });
   }
 
   public render() {
     return (
       <>
         {/* submenu container */}
-        <div className='submenu-container'>
+        <div className="submenu-container">
           {/* Drop-down components */}
           <div>
             <div>
               {/* IP / Domain */}
-              {
-                this.props.module === 'benchmark' && this.props.submodule.length === 0
-                ?
+              {this.props.module === 'benchmark' &&
+              this.props.submodule.length === 0 ? (
                 <div>
-                  <select className='submenu-style-general'
-                    onChange={(e) => this.setState({urlSlot: e.target.value})}
+                  <select
+                    className="submenu-style-general"
+                    onChange={e => this.setState({ urlSlot: e.target.value })}
                   >
                     <option></option>
                     <option>google.co.in</option>
@@ -45,15 +51,14 @@ export default class Submenu extends React.Component<{
                     <option>yahoo.com</option>
                   </select>
                 </div>
-                : null
-              }
+              ) : null}
             </div>
           </div>
 
-          <div className='float-right'>
+          <div className="float-right">
             <button
               onClick={this.sendAddress}
-              className='submenu-show-graph btn-primary'
+              className="submenu-show-graph btn-primary"
             >
               Show
             </button>

@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --fix",
     "tlint": "tslint --fix --project ./tsconfig.json -e src/*.js public/*.js",
-    "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+    "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "prettier": "prettier --write '**/*.tsx'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -60,7 +61,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run tlint"
+      "pre-commit": "npm run prettier && npm run lint && npm run tlint"
     }
   }
 }

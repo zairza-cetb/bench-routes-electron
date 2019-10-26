@@ -9,18 +9,20 @@ export default class Notification extends React.Component<{
     return (
       <div
         className={`notification ${
-          this.props.showNotification ? 'display-notification' : 'close-notification'
+          this.props.showNotification
+            ? 'display-notification'
+            : 'close-notification'
         }`}
       >
-        <div className='notification-content'>
-          <div className='notification-header'>
+        <div className="notification-content">
+          <div className="notification-header">
             <div>Notifications</div>
             <img
-              src='assets/icons/cross.svg'
-              alt='collapse notifications'
-              className='notification-close'
+              src="assets/icons/cross.svg"
+              alt="collapse notifications"
+              className="notification-close"
               onClick={() => this.props.updateShowNotificationsScreen()}
-              onKeyDown={(e) => {
+              onKeyDown={e => {
                 if (e.keyCode === 13) {
                   return this.props.updateShowNotificationsScreen();
                 }
@@ -28,7 +30,7 @@ export default class Notification extends React.Component<{
             />
           </div>
         </div>
-        <div className='notification-body'>this is notification screen</div>
+        <div className="notification-body">this is notification screen</div>
       </div>
     );
   }

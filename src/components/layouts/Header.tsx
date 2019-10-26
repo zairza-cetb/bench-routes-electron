@@ -16,14 +16,14 @@ export default function Header() {
         updateShowNotificationsScreen={updateShowNotificationsScreen}
       />
       <header>
-        <div className='logo-name'>Bench-routes</div>
+        <div className="logo-name">Bench-routes</div>
         {!showNotification ? (
-          <div className='notification-icon'>
+          <div className="notification-icon">
             <img
-              src='assets/icons/notify-icon.svg'
-              alt='notification'
+              src="assets/icons/notify-icon.svg"
+              alt="notification"
               onClick={() => updateShowNotificationsScreen()}
-              onKeyDown={(e) => {
+              onKeyDown={e => {
                 if (e.keyCode === 13) {
                   updateShowNotificationsScreen();
                 }

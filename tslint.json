@@ -5,7 +5,8 @@
     ],
     "jsRules": {},
     "rules": {
-        "adjacent-overload-signatures": true,
+    "arrow-parens": false,
+    "adjacent-overload-signatures": true,
     "array-type": {
         "options": ["array"]
     },
@@ -70,7 +71,7 @@
     },
     "prefer-const": true,
     "prefer-for-of": true,
-    "quotemark": [true, "single", "jsx-single", "avoid-escape", "avoid-template"],
+    "quotemark": [true, "single", "jsx-double", "avoid-escape", "avoid-template"],
     "radix": true,
     "triple-equals": { "options": ["allow-null-check"] },
     "typedef": false,
@@ -79,7 +80,9 @@
     "use-isnan": true,
     "variable-name": {
         "options": ["allow-leading-underscore", "ban-keywords", "check-format", "allow-pascal-case"]
-    }
+    },
+    "trailing-comma": false,
+    "semicolon": [true, "always", "ignore-bound-class-methods"]
     },
     "rulesDirectory": []
 }
