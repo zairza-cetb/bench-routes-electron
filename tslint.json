@@ -81,6 +81,8 @@
     "variable-name": {
         "options": ["allow-leading-underscore", "ban-keywords", "check-format", "allow-pascal-case"]
     },
+    "interface-name": false,
+    "member-access": true,
     "trailing-comma": false,
     "semicolon": [true, "always", "ignore-bound-class-methods"]
     },

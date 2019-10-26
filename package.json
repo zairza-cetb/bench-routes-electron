@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.11.6",
     "@types/react": "^16.9.9",
     "@types/react-router-dom": "^5.1.0",
     "concurrently": "^5.0.0",
@@ -27,7 +27,8 @@
     "lint": "eslint . --fix",
     "tlint": "tslint --fix --project ./tsconfig.json -e src/*.js public/*.js",
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
-    "prettier": "prettier --write '**/*.tsx'"
+    "prettier": "prettier --write '**/*.tsx'",
+    "prim-tests": "npm run prettier && npm run lint && npm run tlint"
   },
   "eslintConfig": {
     "extends": "react-app"

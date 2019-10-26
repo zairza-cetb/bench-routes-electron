@@ -19,17 +19,17 @@ function createWindow() {
     minWidth: 1000,
     title: 'Bench-Routes - Mark your routes',
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
     },
     hasShadow: true,
     autoHideMenuBar: true,
-    transparent: false
+    transparent: false,
   });
 
   mainWindow.loadURL(
     isDev
       ? 'http://localhost:3000'
-      : `file://${path.join(__dirname, '../build/index.html')}`
+      : `file://${path.join(__dirname, '../build/index.html')}`,
   );
 
   mainWindow.webContents.openDevTools();
