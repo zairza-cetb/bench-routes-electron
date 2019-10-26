@@ -1,15 +1,17 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React from "react";
+import React from 'react';
 
 export default class Notification extends React.Component<{
   showNotification: boolean;
   updateShowNotificationsScreen: () => void;
 }> {
-  render() {
+  public render() {
     return (
       <div
         className={`notification ${
-          this.props.showNotification ? "display-notification" : "close-notification"
+          this.props.showNotification
+            ? 'display-notification'
+            : 'close-notification'
         }`}
       >
         <div className="notification-content">
@@ -18,6 +20,7 @@ export default class Notification extends React.Component<{
             <img
               src="assets/icons/cross.svg"
               alt="collapse notifications"
+              className="notification-close"
               onClick={() => this.props.updateShowNotificationsScreen()}
               onKeyDown={e => {
                 if (e.keyCode === 13) {
