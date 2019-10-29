@@ -29,6 +29,8 @@
     "cyclomatic-complexity": true,
     "forin": true,
     "jsdoc-format": true,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
     "label-position": true,
     "max-classes-per-file": { "options": 1 },
     "new-parens": true,

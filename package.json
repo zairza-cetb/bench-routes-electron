@@ -27,10 +27,11 @@
     "eject": "react-scripts eject",
     "eslint-fix": "eslint . --fix",
     "tlint-fix": "tslint --fix --project ./tsconfig.json -e src/*.js public/*.js",
+    "prettier-fix": "prettier --write '**/*.tsx'",
     "lint": "eslint .",
-    "tlint": "tslint src/*.tsx src/**/*.tsx public/*.tsx",
+    "tlint": "tslint src/*.tsx src/**/*.tsx public/*.tsx public/**/*.tsx",
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
-    "prettier": "prettier --write '**/*.tsx'",
+    "prettier": "prettier '**/*.tsx' --list-different",
     "prim-tests": "npm run prettier && npm run lint && npm run tlint"
   },
   "eslintConfig": {

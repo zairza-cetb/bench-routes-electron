@@ -3,11 +3,11 @@ import { HashRouter as Router, Link } from 'react-router-dom';
 import './layouts.style.css';
 
 export default class Sidebar extends React.Component<{}> {
-  state = {
+  public state = {
     showBenchmarkSubmenu: false
   };
 
-  BenchmarkSubmenu = () => {
+  public BenchmarkSubmenu = () => {
     if (this.state.showBenchmarkSubmenu) {
       this.setState({
         showBenchmarkSubmenu: false
@@ -19,7 +19,7 @@ export default class Sidebar extends React.Component<{}> {
     }
   };
 
-  render() {
+  public render() {
     return (
       <Router>
         <div className="sidebar">
