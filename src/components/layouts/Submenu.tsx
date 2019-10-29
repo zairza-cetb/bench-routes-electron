@@ -62,7 +62,7 @@ export default class Submenu extends React.Component<
                     className="submenu-style-general"
                     onChange={e => this.setState({ urlSlot: e.target.value })}
                   >
-                    <option></option>
+                    <option/>
                     <option>google.co.in</option>
                     <option>bing.com</option>
                     <option>yahoo.com</option>
