@@ -11,8 +11,8 @@ function App() {
         <Sidebar />
       </div>
       <div className="inner-component">
-<Header />
-<Navigator />
+        <Header />
+        <Navigator />
       </div>
     </div>
   );

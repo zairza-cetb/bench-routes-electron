@@ -15,6 +15,7 @@
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "tslint-react": "^4.1.0",
     "typescript": "^3.6.4",
     "wait-on": "^3.3.0"
   },
@@ -27,7 +28,7 @@
     "eslint-fix": "eslint . --fix",
     "tlint-fix": "tslint --fix --project ./tsconfig.json -e src/*.js public/*.js",
     "lint": "eslint .",
-    "tlint": "tslint --project ./tsconfig.json -e src/*.js public/*.js",
+    "tlint": "tslint src/*.tsx src/**/*.tsx public/*.tsx",
     "start": "concurrently \"BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
     "prettier": "prettier --write '**/*.tsx'",
     "prim-tests": "npm run prettier && npm run lint && npm run tlint"
