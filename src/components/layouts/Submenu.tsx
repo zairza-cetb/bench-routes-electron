@@ -77,11 +77,10 @@ export default class Submenu extends React.Component<
           <div>
             <span>
               {/* IP / Domain */}
-              {this.props.module === 'ping' ||
+              {(this.props.module === 'ping' ||
               this.props.module === 'jitter' ||
-              this.props.module === 'flood-ping' ||
-              (this.props.module === 'monitoring' &&
-                this.props.submodule.length === 0) ? (
+              this.props.module === 'flood-ping') &&
+                this.props.submodule.length === 0 ? (
                 <span>
                   <select
                     className="submenu-style-general"
@@ -97,50 +96,25 @@ export default class Submenu extends React.Component<
                       : null}
                   </select>
                 </span>
-              ) : null}
-            </span>
-            {/* method, route, param */}
-            {this.props.module === 'monitoring' ? (
-              <>
-                {/* method */}
+              ) : (
                 <span>
                   <select
                     className="submenu-style-general"
-                    onChange={e =>
-                      this.setState({ methodSlot: e.target.value })
-                    }
-                  >
-                    <option />
-                    {this.state.routes.length !== 0
-                      ? this.state.routes.map((val: RouterType, id: number) => (
-                          <option key={id} value={val.method}>
-                            {val.method}
-                          </option>
-                        ))
-                      : null}
-                  </select>
-                </span>
-
-                {/* route */}
-                <span>
-                  <select
-                    className="submenu-style-general"
-                    onChange={e =>
-                      this.setState({ methodSlot: e.target.value })
-                    }
+                    onChange={e => this.setState({ urlSlot: e.target.value })}
                   >
                     <option />
                     {this.state.routes.length !== 0
                       ? this.state.routes.map((val: any, id: number) => (
-                          <option key={id} value={val.route}>
-                            {val.route}
+                          <option key={id} value={val.method + '  ' + val.url + '/' + val.route}>
+                            {val.method + '  ' + val.url + '/' + val.route}
                           </option>
                         ))
                       : null}
                   </select>
                 </span>
-              </>
-            ) : null}
+              )
+              }
+            </span>
           </div>
 
           <div className="float-right">
