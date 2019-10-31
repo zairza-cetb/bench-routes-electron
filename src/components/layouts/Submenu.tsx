@@ -78,9 +78,9 @@ export default class Submenu extends React.Component<
             <span>
               {/* IP / Domain */}
               {(this.props.module === 'ping' ||
-              this.props.module === 'jitter' ||
-              this.props.module === 'flood-ping') &&
-                this.props.submodule.length === 0 ? (
+                this.props.module === 'jitter' ||
+                this.props.module === 'flood-ping') &&
+              this.props.submodule.length === 0 ? (
                 <span>
                   <select
                     className="submenu-style-general"
@@ -105,15 +105,19 @@ export default class Submenu extends React.Component<
                     <option />
                     {this.state.routes.length !== 0
                       ? this.state.routes.map((val: any, id: number) => (
-                          <option key={id} value={val.method + '  ' + val.url + '/' + val.route}>
+                          <option
+                            key={id}
+                            value={
+                              val.method + '  ' + val.url + '/' + val.route
+                            }
+                          >
                             {val.method + '  ' + val.url + '/' + val.route}
                           </option>
                         ))
                       : null}
                   </select>
                 </span>
-              )
-              }
+              )}
             </span>
           </div>
 
