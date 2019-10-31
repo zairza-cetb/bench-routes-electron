@@ -1,5 +1,5 @@
 import React from 'react';
-import { BRConnectionInstance } from '../../utils/connection';
+import BRConnect from '../../utils/connection';
 
 interface SubmenuPropsTypes {
   module: string;
@@ -27,17 +27,12 @@ export default class Submenu extends React.Component<
   SubmenuPropsTypes,
   SubmenuStateTypes
 > {
+  private BRinstance: BRConnect;
   constructor(props: SubmenuPropsTypes) {
     super(props);
 
-    const instance: RouterType = {
-      headers: [],
-      method: '',
-      params: [],
-      url: ''
-    };
     const tmp: RouterType[] = [];
-
+    this.BRinstance = new BRConnect();
     this.state = {
       methodSlot: '',
       module: '',
@@ -50,7 +45,7 @@ export default class Submenu extends React.Component<
 
   public componentDidMount() {
     this.setState({ module: this.props.module });
-    BRConnectionInstance.routeDetails().then((res: any) => {
+    this.BRinstance.routeDetails().then((res: any) => {
       this.setState({ routes: res.routes });
     });
   }
@@ -80,15 +75,19 @@ export default class Submenu extends React.Component<
         <div className="submenu-container">
           {/* Drop-down components */}
           <div>
-            <div>
+            <span>
               {/* IP / Domain */}
-              {this.props.module === 'ping' &&
-              this.props.submodule.length === 0 ? (
-                <div>
+              {this.props.module === 'ping' ||
+              this.props.module === 'jitter' ||
+              this.props.module === 'flood-ping' ||
+              (this.props.module === 'monitoring' &&
+                this.props.submodule.length === 0) ? (
+                <span>
                   <select
                     className="submenu-style-general"
                     onChange={e => this.setState({ urlSlot: e.target.value })}
                   >
+                    <option />
                     {this.state.routes.length !== 0
                       ? this.state.routes.map((val: RouterType, id: number) => (
                           <option key={id} value={val.url}>
@@ -97,9 +96,51 @@ export default class Submenu extends React.Component<
                         ))
                       : null}
                   </select>
-                </div>
+                </span>
               ) : null}
-            </div>
+            </span>
+            {/* method, route, param */}
+            {this.props.module === 'monitoring' ? (
+              <>
+                {/* method */}
+                <span>
+                  <select
+                    className="submenu-style-general"
+                    onChange={e =>
+                      this.setState({ methodSlot: e.target.value })
+                    }
+                  >
+                    <option />
+                    {this.state.routes.length !== 0
+                      ? this.state.routes.map((val: RouterType, id: number) => (
+                          <option key={id} value={val.method}>
+                            {val.method}
+                          </option>
+                        ))
+                      : null}
+                  </select>
+                </span>
+
+                {/* route */}
+                <span>
+                  <select
+                    className="submenu-style-general"
+                    onChange={e =>
+                      this.setState({ methodSlot: e.target.value })
+                    }
+                  >
+                    <option />
+                    {this.state.routes.length !== 0
+                      ? this.state.routes.map((val: any, id: number) => (
+                          <option key={id} value={val.route}>
+                            {val.route}
+                          </option>
+                        ))
+                      : null}
+                  </select>
+                </span>
+              </>
+            ) : null}
           </div>
 
           <div className="float-right">
