@@ -71,10 +71,10 @@ export default class Sidebar extends React.Component<{}> {
                   measure={false}
                   enter={{
                     opacity: 1,
-                    scale: 1,
+                    scale: 1
                   }}
                   leave={{
-                    opacity: 0,
+                    opacity: 0
                   }}
                 >
                   <div>
@@ -112,13 +112,14 @@ export default class Sidebar extends React.Component<{}> {
                               className="sidebar-submenu-inner"
                               alt="Benchmarks"
                           /> */}
-                          <div className="sidebar-head sidebar-inner">Jitter</div>
+                          <div className="sidebar-head sidebar-inner">
+                            Jitter
+                          </div>
                         </div>
                       </div>
                     </Link>
                   </div>
                 </Transition>
-
               ) : (
                 <div />
               )}
