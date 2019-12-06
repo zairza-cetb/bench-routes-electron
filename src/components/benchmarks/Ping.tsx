@@ -134,21 +134,34 @@ export default class PingModule extends React.Component<
       });
   };
 
+  public opts(operation: string): void {
+    switch (operation) {
+      case 'start':
+    }
+  }
+
   public render() {
     return (
       <>
-        <Submenu
-          module="ping"
-          submodule=""
-          getAddress={this.getAddressSubmenu}
-        />
-        {this.state.showChart ? (
-          <div>
-            <BRCharts opts={this.state.chartOpts} />
-          </div>
-        ) : (
-          <div>Chart not available</div>
-        )}
+        <div className="btn-layout">
+          {/* operations */}
+          <button className="button-operations btn btn-success">Start</button>
+          <button className="button-operations btn btn-danger">Stop</button>
+        </div>
+        <div>
+          <Submenu
+            module="ping"
+            submodule=""
+            getAddress={this.getAddressSubmenu}
+          />
+          {this.state.showChart ? (
+            <div>
+              <BRCharts opts={this.state.chartOpts} />
+            </div>
+          ) : (
+            <div>Chart not available</div>
+          )}
+        </div>
       </>
     );
   }
