@@ -48,14 +48,13 @@ export default class PingModule extends React.Component<
         const norTime: number[] = [];
         const timeStamp: string[] = [];
 
-        // tslint:disable-next-line: prefer-for-of
-        for (let i = 0; i < data.length; i++) {
-          const inst: any = data[i];
-          yMin.push(inst.datapoint.Min);
-          yMean.push(inst.datapoint.Mean);
-          yMax.push(inst.datapoint.Max);
-          yMdev.push(inst.datapoint.Mdev);
-          norTime.push(inst.normalizedTime);
+        let inst;
+        for (inst of data) {
+          yMin.push(inst.Min);
+          yMean.push(inst.Mean);
+          yMax.push(inst.Max);
+          yMdev.push(inst.Mdev);
+          norTime.push(inst.relative);
           timeStamp.push(inst.timestamp);
         }
 

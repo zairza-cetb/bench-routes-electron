@@ -37,25 +37,18 @@ export default class Jitter extends Component<
   public getAddressSubmenu = (sAddressParam: string) => {
     this.setState({ sAddress: sAddressParam, showChart: false });
     this.connection
-      .signalPingRouteFetchAllTimeSeries(sAddressParam)
+      .signalJitterRouteFetchAllTimeSeries(sAddressParam)
       .then((res: any) => {
         // format the values
         const data: any[] = JSON.parse(res.data);
-        const yMin: BRChartOpts[] = [];
-        const yMean: BRChartOpts[] = [];
-        const yMax: BRChartOpts[] = [];
-        const yMdev: BRChartOpts[] = [];
+        const jitter: BRChartOpts[] = [];
         const norTime: number[] = [];
         const timeStamp: string[] = [];
 
-        // tslint:disable-next-line: prefer-for-of
-        for (let i = 0; i < data.length; i++) {
-          const inst: any = data[i];
-          yMin.push(inst.datapoint.Min);
-          yMean.push(inst.datapoint.Mean);
-          yMax.push(inst.datapoint.Max);
-          yMdev.push(inst.datapoint.Mdev);
-          norTime.push(inst.normalizedTime);
+        let inst;
+        for (inst of data) {
+          jitter.push(inst.datapoint);
+          norTime.push(inst.relative);
           timeStamp.push(inst.timestamp);
         }
 
@@ -75,7 +68,7 @@ export default class Jitter extends Component<
             pHoverRadius: 5,
             pRadius: 1,
             xAxisValues: norTime,
-            yAxisValues: yMin
+            yAxisValues: jitter
           }
         ];
 
@@ -95,20 +88,18 @@ export default class Jitter extends Component<
           <button className="button-operations btn btn-success">Start</button>
           <button className="button-operations btn btn-danger">Stop</button>
         </div>
-        <div>
-          <Submenu
-            module="ping"
-            submodule=""
-            getAddress={this.getAddressSubmenu}
-          />
-          {this.state.showChart ? (
-            <div>
-              <BRCharts opts={this.state.chartOpts} />
-            </div>
-          ) : (
-            <div>Chart not available</div>
-          )}
-        </div>
+        <Submenu
+          module="jitter"
+          submodule=""
+          getAddress={this.getAddressSubmenu}
+        />
+        {this.state.showChart ? (
+          <div>
+            <BRCharts opts={this.state.chartOpts} />
+          </div>
+        ) : (
+          <div>Chart not available</div>
+        )}
       </>
     );
   }
