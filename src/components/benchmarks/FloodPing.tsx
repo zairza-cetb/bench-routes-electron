@@ -38,7 +38,7 @@ export default class FloodPing extends Component<
   }
 
   public getAddressSubmenu = (sAddressParam: string) => {
-    this.setState({ sAddress: sAddressParam });
+    this.setState({ sAddress: sAddressParam, showChart: false });
     this.connection
       .signalFloodPingRouteFetchAllTimeSeries(sAddressParam)
       .then((res: any) => {
@@ -170,7 +170,7 @@ export default class FloodPing extends Component<
           <button className="button-operations btn btn-danger">Stop</button>
         </div>
         <Submenu
-          module="ping"
+          module="flood-ping"
           submodule=""
           getAddress={this.getAddressSubmenu}
         />

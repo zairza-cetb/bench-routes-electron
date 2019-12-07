@@ -90,7 +90,7 @@ export default class Jitter extends Component<
         </div>
         <div>
           <Submenu
-            module="ping"
+            module="jitter"
             submodule=""
             getAddress={this.getAddressSubmenu}
           />

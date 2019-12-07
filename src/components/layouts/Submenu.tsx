@@ -58,6 +58,9 @@ export default class Submenu extends React.Component<
       case 'jitter':
         this.props.getAddress(this.state.urlSlot);
         break;
+      case 'flood-ping':
+        this.props.getAddress(this.state.urlSlot);
+        break;
       default:
         this.props.getAddress(
           this.state.urlSlot +
