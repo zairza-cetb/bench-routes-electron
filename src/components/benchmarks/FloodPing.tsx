@@ -53,13 +53,13 @@ export default class FloodPing extends Component<
 
         let inst;
         for (inst of data) {
-          yMin.push(inst.datapoint.Min);
-          yMean.push(inst.datapoint.Mean);
-          yMax.push(inst.datapoint.Max);
-          yMdev.push(inst.datapoint.Mdev);
-          norTime.push(inst.normalizedTime);
+          yMin.push(inst.Min);
+          yMean.push(inst.Mean);
+          yMax.push(inst.Max);
+          yMdev.push(inst.Mdev);
+          norTime.push(inst.relative);
           timeStamp.push(inst.timestamp);
-          packetLoss.push(inst.datapoint.PacketLoss);
+          packetLoss.push(inst.PacketLoss);
         }
 
         const chartOptions: BRChartOpts[] = [
